@@ -3,7 +3,7 @@ package goevent_test
 import (
 	"testing"
 
-	"github.com/pocke/goevent"
+	"github.com/indie21/goevent"
 )
 
 func TestNewTable(t *testing.T) {

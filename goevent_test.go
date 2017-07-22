@@ -4,7 +4,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/pocke/goevent"
+	"github.com/indie21/goevent"
 )
 
 func TestEventNew(t *testing.T) {

@@ -75,16 +75,16 @@ func (p *event) Trigger(args ...interface{}) error {
 	p.lmu.RLock()
 	defer p.lmu.RUnlock()
 
-	wg := sync.WaitGroup{}
-	wg.Add(len(p.listeners))
+	// wg := sync.WaitGroup{}
+	// wg.Add(len(p.listeners))
 	for _, fn := range p.listeners {
-		go func(f reflect.Value) {
-			defer wg.Done()
+		func(f reflect.Value) {
+			// defer wg.Done()
 			f.Call(arguments)
 		}(fn)
 	}
 
-	wg.Wait()
+	// wg.Wait()
 	return nil
 }
 
